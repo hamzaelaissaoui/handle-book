@@ -1,0 +1,81 @@
+hr{
+    width: 80%;
+    background-color: aqua;
+    box-shadow: 1px 1px 17px wheat;
+}
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(14, 13, 13, 0.863);
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px wheat;
+}
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+.inputs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputs input{
+    border: none;
+    padding: 12px;
+    width: 100%;
+}
+.btn{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 65%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn button{
+    border: none;
+    padding: 12px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(18, 18, 68);
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: rgb(42, 42, 194);
+}
+
+.btn a{
+    text-decoration: none;
+    padding: 12px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer;
+}
+.btn a:hover{
+    color: rgb(42, 42, 194);
+}

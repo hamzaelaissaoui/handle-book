@@ -1,0 +1,91 @@
+.header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to right,black,rgb(97, 96, 96) 60%, black );
+    flex-wrap: wrap;
+}
+.logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px black;
+    width: 10%;
+    flex-grow: 1;
+    align-items: flex-start;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.admin-area{
+    font-size: small;
+    align-self: flex-end;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: gray;
+}
+.items{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 3;
+    width: 20%;
+    align-items: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.items a{
+    color: wheat;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 3px;
+}
+.items a:hover{
+    color: white;
+}
+
+.search{
+    position: relative;
+    display: flex;
+    flex-grow: 6;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    position: relative;
+    width: 60%;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px gray;
+}
+.login{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+.login a{
+    color: wheat;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 3px;
+    padding: 10px;
+    border: .01rem solid white;
+}
+.login a:hover{
+   background-color: gray;
+}

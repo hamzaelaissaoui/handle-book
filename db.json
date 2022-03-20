@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "book one",
+      "price": "147.56",
+      "description": "description for book one",
+      "images": [
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "users": [
+    {
+      "email": "hamza@mail.com",
+      "password": "$2a$10$FCbH7g4NrEaGizGi1AYkFubc573TAAgLSIFCiFVqiqBher/Wy2WAW",
+      "id": 1
+    }
+  ]
+}
