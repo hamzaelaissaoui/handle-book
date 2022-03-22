@@ -12,6 +12,11 @@
     bottom: 0;
     width: 100%;
 }
+hr{
+    background-color: black;
+    height: 1px;
+    border: none;
+}
 
 .body{
     position: absolute;

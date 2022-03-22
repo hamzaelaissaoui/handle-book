@@ -1,12 +1,20 @@
-<div class="login">
-    <div class="title">Login</div>
-    <hr>
-    <div class="inputs">
-        <input type="text" placeholder="E-mail">
-        <input type="password" placeholder="Password">
-    </div>
-    <div class="btn">
-        <button>Sign-in</button>
-        <a routerLink="/register">Create new account!</a>
-    </div>
-</div>
+<form [formGroup]="forms" (submit)="onSubmit()" class="login">
+        <div class="title">Login</div>
+        <div class="inputs">
+            <input type="text" formControlName="email" placeholder="E-mail">
+            <span class="error" *ngIf="forms.controls.email.touched && forms.controls.email.invalid">
+                <span *ngIf="forms.controls.email.errors?.email">E-mail invalid !</span>
+                <span *ngIf="forms.controls.email.errors?.required">This field is required !</span>
+            </span>
+
+            <input type="password" formControlName="password" placeholder="Password">
+            <span class="error" *ngIf="forms.controls.password.touched && forms.controls.password.invalid">
+                <span *ngIf="forms.controls.password.errors?.minlength">Enter 6 caracteres min !</span>
+                <span *ngIf="forms.controls.password.errors?.required">This field is required !</span>
+            </span>
+        </div>
+        <div class="btn">
+            <button type="submit">Sign-in</button>
+            <a routerLink="/register">Create new account!</a>
+        </div>
+</form>
