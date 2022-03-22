@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../auth.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.authService.login(this.forms.controls.email.value, this.forms.controls.password.value)
-      .subscribe(v=> console.log(v));
+      .subscribe((v:User)=> console.log(v));
   }
 }
