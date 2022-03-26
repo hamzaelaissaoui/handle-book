@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 import { User } from '../../models/user';
 
@@ -11,8 +12,10 @@ import { User } from '../../models/user';
 export class LoginComponent implements OnInit {
 
   forms!: FormGroup;
+  isLoading: boolean = false; 
+  error!: string;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.forms = new FormGroup({
@@ -22,7 +25,17 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
+    this.isLoading = true;
     this.authService.login(this.forms.controls.email.value, this.forms.controls.password.value)
-      .subscribe((v:User)=> console.log(v));
+      .subscribe(
+        ()=> {
+          this.isLoading = false;
+          this.router.navigate(['/'])
+        },
+        error => {
+          this.isLoading = false;
+          this.error = error;
+        }
+      );
   }
 }

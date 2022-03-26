@@ -45,13 +45,16 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.items a{
+.item{
     color: wheat;
     font-weight: 800;
     text-decoration: none;
     padding: 3px;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
 }
-.items a:hover{
+.item:hover{
     color: white;
 }
 
@@ -81,14 +84,16 @@ input{
     justify-content: center;
     font-size: larger;
 }
-.login a{
+.login button{
     color: wheat;
     font-weight: 800;
     text-decoration: none;
     padding: 3px;
     padding: 10px;
     border: .01rem solid white;
+    background-color: transparent;
+    cursor: pointer;
 }
-.login a:hover{
+.login button:hover{
    background-color: gray;
 }

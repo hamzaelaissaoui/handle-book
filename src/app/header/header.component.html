@@ -6,14 +6,14 @@
         <div class="admin-area">Admin area</div>
     </div>
     <div class="items">
-        <a href="#">Home</a>
-        <a href="#">Category</a>
-        <a href="#">Account</a>
+        <a href="#" class="item">Home</a>
+        <a href="#" class="item">Category</a>
+        <button href="#" class="item" [disabled]="user!=null">Account</button>
     </div>
     <div class="search">
         <input type="search" placeholder="Search books...">
     </div>
     <div class="login">
-        <a routerLink="/login">Login</a>
+        <button type="button" (click)="onConnexion()">{{user == null ? 'Login' : 'Logout'}}</button>
     </div>
 </div>

@@ -54,7 +54,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: transparent;
+    background-color: rgba(49, 41, 41, 0.39);
     color: wheat;
     font-weight: 700;
     font-size: large;
@@ -82,8 +82,19 @@
 
 .error{
     color: rgb(177, 34, 34);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
     font-weight: 600;
     margin-bottom: 5px;
+}
+.spinner{
+    position: relative;
+    text-align: center;
+}
+.errorResponse{
+    position: relative;
+    width: 80%;
+    height: 20%;
+    color: rgb(177, 34, 34);
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -7,13 +7,15 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { AuthService } from './auth.service';
+import { SpinnerComponent } from './container/spinner/spinner.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

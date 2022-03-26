@@ -1,3 +1,7 @@
+
+<div class="spinner"  *ngIf="isLoading">
+    <app-spinner></app-spinner>
+</div>
 <form [formGroup]="forms" (submit)="onSubmit()" class="login">
         <div class="title">Login</div>
         <div class="inputs">
@@ -12,6 +16,9 @@
                 <span *ngIf="forms.controls.password.errors?.minlength">Enter 6 caracteres min !</span>
                 <span *ngIf="forms.controls.password.errors?.required">This field is required !</span>
             </span>
+        </div>
+        <div class="errorResponse" *ngIf="error">
+            {{error}}
         </div>
         <div class="btn">
             <button type="submit">Sign-in</button>
