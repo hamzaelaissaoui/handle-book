@@ -1,40 +1,14 @@
 <div class="list">
-    <div routerLinkActive="active">
-        <a class="book" routerLink="detail/1">
-            <img src="https://www.lisez.com/usuaris/libros/fotos/9782266237/m_libros/9782266236560ORI.jpg">
+    <div routerLinkActive="active" *ngFor="let book of books">
+        <a class="book" [routerLink]="['detail',book.id]">
+            <img [src]="[book.images.length===0 ? './assets/images/default.book.png' : book.images[0]]">
             <div class="info">
-                <h2>Formule de dieu</h2>
+                <h2>{{book.name}}</h2>
                 <p class="desc">
-                    La Formule de Dieu est un roman du journaliste et écrivain portugais José Rodrigues dos Santos.
-                    Initialement édité en 2006, il est paru en France le 14 juin 2012, chez HC Éditions,
-                    puis réédité en 2013, chez Pocket
+                    {{book.desc}}
                 </p>
             </div>
-            <div class="status">158 pages consulted</div>
+            <div class="status">{{book.views}} pages consulted</div>
         </a>
-    </div>
-    <div class="book">
-        <img src="https://www.lisez.com/usuaris/libros/fotos/9782266237/m_libros/9782266236560ORI.jpg">
-        <div class="info">
-            <h2>Formule de dieu</h2>
-            <p class="desc">
-                La Formule de Dieu est un roman du journaliste et écrivain portugais José Rodrigues dos Santos.
-                Initialement édité en 2006, il est paru en France le 14 juin 2012, chez HC Éditions,
-                puis réédité en 2013, chez Pocket
-            </p>
-        </div>
-        <div class="status">158 pages consulted</div>
-    </div>
-    <div class="book">
-        <img src="https://www.lisez.com/usuaris/libros/fotos/9782266237/m_libros/9782266236560ORI.jpg">
-        <div class="info">
-            <h2>Formule de dieu</h2>
-            <p class="desc">
-                La Formule de Dieu est un roman du journaliste et écrivain portugais José Rodrigues dos Santos.
-                Initialement édité en 2006, il est paru en France le 14 juin 2012, chez HC Éditions,
-                puis réédité en 2013, chez Pocket
-            </p>
-        </div>
-        <div class="status">158 pages consulted</div>
     </div>
 </div>

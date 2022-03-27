@@ -2,13 +2,19 @@
   "books": [
     {
       "id": 1,
-      "name": "book one",
-      "price": "147.56",
-      "description": "description for book one",
+      "name": "La Formule de Dieu",
+      "desc": "La Formule de Dieu est un roman du journaliste et écrivain portugais José Rodrigues dos Santos.Initialement édité en 2006, il est paru en France le 14 juin 2012, chez HC Éditions,puis réédité en 2013, chez Pocket",
+      "views":"166",
       "images": [
-        "",
-        "",
-        ""
+        "https://www.lisez.com/usuaris/libros/fotos/9782266237/m_libros/9782266236560ORI.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "La Formule de Dieu",
+      "desc": "La Formule de Dieu est un roman du journaliste et écrivain portugais José Rodrigues dos Santos.Initialement édité en 2006, il est paru en France le 14 juin 2012, chez HC Éditions,puis réédité en 2013, chez Pocket",
+      "views":"108",
+      "images": [
       ]
     }
   ],
