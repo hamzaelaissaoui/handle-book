@@ -10,7 +10,7 @@ import { User } from '../authentication/models/user';
 })
 export class HeaderComponent implements OnInit {
 
-  user:User =JSON.parse(localStorage.getItem("user") || "{}") as User;
+  user:User =JSON.parse(localStorage.getItem("user")!) as User;
 
   constructor(private authService: AuthService, private router:Router) { }
 
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onConnexion(){
-    if(this.user==null)
+    if(this.user == null)
       this.loginRoute();
     else this.logout();
   }

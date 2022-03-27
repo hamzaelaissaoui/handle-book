@@ -1,1 +1,50 @@
-<p>register works!</p>
+<div class="spinner"  *ngIf="isLoading">
+    <app-spinner></app-spinner>
+</div>
+<form [formGroup]="forms" (submit)="onSubmit()" class="login">
+        <div class="title">Register</div>
+        <div class="inputs">
+            <input type="text" formControlName="username" placeholder="Username">
+            <span class="error" *ngIf="forms.controls.username.touched && forms.controls.username.invalid">
+                <span *ngIf="forms.controls.username.errors?.minlength">Enter 6 caracteres min !</span>
+                <span *ngIf="forms.controls.username.errors?.required">This field is required !</span>
+            </span>
+            <hr>
+            <input type="text" formControlName="email" placeholder="E-mail">
+            <span class="error" *ngIf="forms.controls.email.touched && forms.controls.email.invalid">
+                <span *ngIf="forms.controls.email.errors?.email">E-mail invalid !</span>
+                <span *ngIf="forms.controls.email.errors?.required">This field is required !</span>
+            </span>
+            <input type="text" formControlName="confirmEmail" placeholder="Confirm E-mail">
+            <span class="error" *ngIf="forms.controls.confirmEmail.touched">
+                <span *ngIf="forms.controls.email.value !== forms.controls.confirmEmail.value
+                            && !forms.controls.confirmEmail.pristine">These emails do not match !</span>
+                <span *ngIf="forms.controls.confirmEmail.errors?.required">This field is required !</span>
+            </span>
+            <hr>
+            <input type="password" formControlName="password" placeholder="Password">
+            <span class="error" *ngIf="forms.controls.password.touched && forms.controls.password.invalid">
+                <span *ngIf="forms.controls.password.errors?.minlength">Enter 6 caracteres min !</span>
+                <span *ngIf="forms.controls.password.errors?.required">This field is required !</span>
+            </span>
+            
+            <input type="password" formControlName="confirmPassword" placeholder="Confirm password">
+            <span class="error" *ngIf="forms.controls.confirmPassword.touched">
+                <span *ngIf="forms.controls.password.value !== forms.controls.confirmPassword.value
+                            && !forms.controls.confirmPassword.pristine">These passwords do not match !</span>
+                <span *ngIf="forms.controls.password.errors?.required">This field is required !</span>
+            </span>
+            <hr>
+            <input type="date" formControlName="birthday">
+            <span class="error" *ngIf="forms.controls.confirmPassword.touched && forms.controls.password.invalid">
+                This field is required !
+            </span>
+        </div>
+        <div class="errorResponse" *ngIf="error">
+            {{error}}
+        </div>
+        <div class="btn">
+            <button type="submit" [disabled]="forms.invalid">Sign-up</button>
+            <a routerLink="/login">Back to login?</a>
+        </div>
+</form>

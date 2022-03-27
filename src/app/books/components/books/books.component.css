@@ -1,0 +1,18 @@
+.books{
+    position: relative;
+    display: flex;
+    color: wheat;
+    width: 100%;
+    padding: 20px;
+}
+.books-list{
+    position: relative;
+    width: 75%;
+    padding: 10px;
+}
+.books-details{
+    position: relative;
+    width: 25%;
+    padding: 10px;
+    border: 2px dashed wheat;
+}
