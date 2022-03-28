@@ -1,0 +1,120 @@
+.box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.edit-input{
+    position: relative;
+    border: none;
+    width: 150%;
+    padding: 8px;
+    background-color: rgb(85, 72, 72);
+    color: wheat;
+    box-sizing: border-box;
+}
+textarea::-webkit-scrollbar {
+    width: .3em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: wheat;
+}
+.add-image{
+    text-align: center;
+}
+.add-image input{
+    border: none;
+    padding: 8px;
+}
+.img{
+    text-align: center;
+}
+.img img{
+    width: 300px;
+    height: 500px;
+}
+.switch-img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:12cm;
+}
+.switch-img button:hover{
+    background-color: gray;
+}
+.switch-img button{
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    color: black;
+}
+.info{
+    position: relative;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.info p{
+    width: 85%;
+    font-size: large;
+}
+hr{
+    width: 100%;
+    border: 1px solid white;
+}
+.status{
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    position: relative;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    color: rgb(53, 53, 255);
+    width: 100%;
+    justify-content: center;
+}
+.icon{
+    margin-left: 10px;
+}
+.btn{
+    padding: 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    text-align: center;
+}
+button{
+    border: none;
+    padding: 8px;
+    font-weight: 700;
+    color: wheat;
+    cursor: pointer;
+}
+.edit{
+    background-color: green;
+}
+.add{
+    background-color: rgb(5, 5, 146);
+    margin-bottom: 8px;
+}
+.add:hover{
+    background-color: rgb(39, 39, 189);
+}
+.edit:hover{
+    background-color: rgb(0, 207, 0);
+}
+.cancel{
+    background-color: red;
+}
+.cancel:hover{
+    background-color: rgb(255, 93, 93);
+}

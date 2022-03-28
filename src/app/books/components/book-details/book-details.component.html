@@ -1,1 +1,28 @@
-<p>book id : {{book.id}} details works!</p>
+<div class="box">
+    <div class="add-image" *ngIf="editMode">
+        <input type="text" placeholder="http://image.path...">
+        <button class="add">Add new Image</button>
+    </div>
+    <div class="img">
+        <img [src]="[book.images[0]]">
+        <div class="switch-img">
+            <button><span class='material-icons'>arrow_back_ios</span></button> 
+            <button><span class='material-icons'>arrow_forward_ios</span></button>
+        </div>
+    </div>
+    <div class="info">
+        <h2 *ngIf="!editMode">{{book.name}}</h2>
+        <input class="edit-input" type="text" [(ngModel)]="book.name" *ngIf="editMode">
+        <hr>
+        <p *ngIf="!editMode">{{book.desc}}</p>
+        <textarea class="edit-input" rows="3" [(ngModel)]="book.desc" *ngIf="editMode"></textarea>
+    </div>
+    <div class="status">
+        <span>{{book.views}}</span>
+        <span class="material-icons icon">remove_red_eye</span>
+    </div>
+    <div class="btn">
+        <button class="edit" (click)="editMode = true">Edit</button>
+        <button class="cancel" (click)="editMode = false" *ngIf="editMode">Cancel</button>
+    </div>
+</div>

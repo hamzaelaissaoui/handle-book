@@ -13,6 +13,8 @@ export class BookDetailsComponent implements OnInit, OnDestroy {
 
   book!: Book;
   subscription!: Subscription;
+
+  editMode: boolean = false;
   constructor(private route: ActivatedRoute) { }
 
 

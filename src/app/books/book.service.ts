@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Book } from './models/book';
 
 const URL = 'http://localhost:5000/books'
@@ -37,6 +37,13 @@ export class BookService {
 
   fetchBooks(): Observable<Book[]>{
     return this.http.get<Book[]>(URL).pipe(
+      map((data: Book[])=>{
+        return data.map((b:Book)=>{
+          if(b.images.length === 0)
+            b.images.push("./assets/images/default.book.png");
+          return b;
+        })
+      }),
       tap((data:Book[]) => this.setBooks(data))
     );
   }

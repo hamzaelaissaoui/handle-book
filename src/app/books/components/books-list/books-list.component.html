@@ -1,12 +1,12 @@
 <div class="list">
     <div routerLinkActive="active" *ngFor="let book of books">
         <a class="book" [routerLink]="['detail',book.id]">
-            <img [src]="[book.images.length===0 ? './assets/images/default.book.png' : book.images[0]]">
+            <img [src]="[book.images[0]]">
             <div class="info">
                 <h2>{{book.name}}</h2>
-                <p class="desc">
+                <!-- <p class="desc">
                     {{book.desc}}
-                </p>
+                </p> -->
             </div>
             <div class="status">{{book.views}} pages consulted</div>
         </a>

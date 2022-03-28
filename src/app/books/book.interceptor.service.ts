@@ -11,8 +11,10 @@ export class BookInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
 
-    if (req.url === "http://localhost:5000/login" || req.url === "http://localhost:5000/register")
+    if (req.url === "http://localhost:5000/login" || req.url === "http://localhost:5000/register"
+        || req.url === "http://localhost:5000/books"){
       return next.handle(req);
+  }
     
     const token: string = localStorage.getItem("token")!;
     const newReq:HttpRequest<any> = req.clone({headers: req.headers.append("Authorization",`Bearer ${token}`)});
